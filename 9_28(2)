@@ -1,0 +1,21 @@
+#include <stdio.h> 
+
+main() {
+	double d;
+	float f;
+
+	d = f = 12.3456789;
+	printf("1. %f\n", d); 
+	printf("2. %f\n", f);
+	printf("3. %f\n", 1234); 
+	printf("4. %f %f\n", d, d);
+	printf("5. %f %f\n", f, f);
+	printf("6. %f %f %f\n", f, d, 1234); 
+	printf("7. %f %f %f\n", d, f, 1234); 
+	printf("8. %f %f %f\n", f, 1234, d);
+	printf("9. %f %f %f\n", d, 1234, f);
+	printf("10. %f %f %f\n", 1234, d, f);
+	printf("11. %f %f %f\n", 1234, f, d);
+	printf("12. %d %d %d\n", 1234, d, f);
+	printf("13. %d %d %d\n", d, 1234, f);
+}

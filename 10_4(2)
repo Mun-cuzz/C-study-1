@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+void printstring(char s[]) {
+	int			  i;
+
+	for (i = 0; i < 10; i++)
+		printf("s[%d]", i);
+	printf("\n");
+
+	for (i = 0; i < 10; i++)
+		printf("%5c", s[i]);
+	printf("\n");
+
+	for (i = 0; i < 10; i++)
+		printf("%5X", s[i]);
+	printf("\n");
+	printf("\n");
+}
+
+main() {
+	printstring("I am beautiful");
+	printstring("beautiful");
+	printstring("");
+}
+
+//자습자료 2-3
+//%X: 부호 있는 16진수
+//s[0]s[1]s[2]s[3]s[4]s[5]s[6]s[7]s[8]s[9]
+//I         a    m         b    e    a    u    t
+//49   20   61   6D   20   62   65   61   75   74
+
+//s[0]s[1]s[2]s[3]s[4]s[5]s[6]s[7]s[8]s[9]
+//b    e    a    u    t    i    f    u    l
+//62   65   61   75   74   69   66   75   6C    0
+
+//s[0]s[1]s[2]s[3]s[4]s[5]s[6]s[7]s[8]s[9]
+//                                             l
+//0    0    0    0    0    0    0    0    0   6C
+//? ""에서 l이 남아있는 이유?

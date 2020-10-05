@@ -1,0 +1,42 @@
+#include <stdio.h>
+
+int binsearch(int x, int v[], int n)
+{
+	int low, high, mid;
+
+	low = 0, high = n - 1;
+	while (low <= high) {
+		mid = (low + high) / 2;
+		if (x < v[mid])
+			high = mid - 1;
+		else if (x > v[mid])
+			low = mid + 1;
+		else
+			return mid;
+	}
+	return -1;
+}
+main()
+{
+	int a[] = { 2,5,7,9,13,17,20,22,28,33,40,40,51,57,70 };
+
+	printf("%d\n", binsearch(1, a, 15));
+	printf("%d\n", binsearch(2, a, 15));
+	printf("%d\n", binsearch(3, a, 15));
+	printf("%d\n", binsearch(5, a, 15));
+	printf("%d\n", binsearch(6, a, 15));
+	printf("%d\n", binsearch(40, a, 15));
+	printf("%d\n", binsearch(40, a, 14));
+}
+
+//자습자료 3-1
+//코드 이해완료
+//보충필요
+//실행 결과
+/*-1
+0
+- 1
+1
+- 1
+11
+10*/

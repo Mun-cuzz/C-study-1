@@ -1,0 +1,16 @@
+#include <stdio.h>
+#define _CRT_SECURE_NO_WARNINGS
+
+main() {
+	int a;
+
+	scanf("%d", &a);
+	if((a >= 0)&&(a <= 100)){
+		if (90 <= a) {printf("A");}
+			else if (80 <= a) {printf("B");}
+				else if (70 <= a) {printf("C");}
+					else if (60 <= a) {printf("D");}
+						else {printf("F");}
+	}
+}
+//백준 9498
